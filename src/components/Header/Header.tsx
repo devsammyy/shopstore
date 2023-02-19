@@ -6,14 +6,13 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import NavItems from "./NavItems";
-import SearchBar from "./Search";
-import { Button, Avatar } from "@mui/material";
+import SearchBar from "./SearchBar";
+import Collections from "./Collections";
+import Categories from "./Categories";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact", "Login/Register"];
@@ -27,47 +26,45 @@ export default function Header() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ background: "green" }}>
+      <AppBar component="nav" sx={{ background: "black" }}>
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ display: { sm: "none" } }}
+            // sx={{ display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, marginX: 2, display: { sm: "block" } }}
+            sx={{
+              flexGrow: { xs: 1, sm: 0 },
+              marginX: 2,
+              display: { sm: "block" },
+            }}
           >
             Shopstore
           </Typography>
           <Box
             sx={{
               flexGrow: 1,
-              display: { sm: "none", xs: "none", md: "flex" },
+              display: { sm: "flex", xs: "none", md: "flex" },
             }}
           >
             <SearchBar />
           </Box>
           <Box
             sx={{
-              display: { sm: "flex", xs: "none", md: "flex" },
-              flexGrow: 1,
+              display: { sm: "flex", xs: "flex" },
+              sm: { justifyContent: "flex-end" },
+              md: { justifyContent: "flex-end" },
             }}
           >
             <NavItems />
           </Box>
-          <Button>
-            <Avatar
-              alt="Babatunde Adebayo"
-              src="https//unsplash.com/3"
-              sx={{ color: "white" }}
-            />
-          </Button>
         </Toolbar>
       </AppBar>
       <Box component="nav">
@@ -83,26 +80,22 @@ export default function Header() {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "black",
+              color: "white",
             },
           }}
         >
           <Box onClick={handleDrawerToggle}>
-            <Typography variant="h6">Shopstore</Typography>
+            <Typography variant="h6" sx={{ m: 2 }}>
+              Shopstore
+            </Typography>
             <Divider />
             <List>
-              <ListItemButton>
-                <ListItemText primary={"Collections"} />
-              </ListItemButton>
-              <Divider />
-              <ListItemButton>
-                <ListItemText primary={"Shoes"} />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemText primary={"Bags"} />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemText primary={"For Men"} />
-              </ListItemButton>
+              <Collections />
+            </List>
+            <Divider />
+            <List>
+              <Categories />
             </List>
           </Box>
         </Drawer>

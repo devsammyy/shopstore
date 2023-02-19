@@ -1,14 +1,19 @@
 import React from "react";
-import { ChatRounded, Notifications, ShoppingCart } from "@mui/icons-material";
+import { Mail, Notifications, ShoppingCart } from "@mui/icons-material";
 import { Avatar, Badge, Box } from "@mui/material";
 import Button from "@mui/material/Button";
 
 const NavItems = () => {
   return (
     <>
-      <Button>
+      <Button sx={{ display: { xs: "none", sm: "block" } }}>
         <Badge badgeContent={4} color="error">
           <Notifications sx={{ color: "white" }} />
+        </Badge>
+      </Button>
+      <Button sx={{ display: { sm: "block", xs: "none", md: "block" } }}>
+        <Badge badgeContent={4} color="error">
+          <Mail sx={{ color: "white" }} />
         </Badge>
       </Button>
       <Button>
@@ -17,9 +22,11 @@ const NavItems = () => {
         </Badge>
       </Button>
       <Button>
-        <Badge badgeContent={0} color="error">
-          <ChatRounded sx={{ color: "white" }} />
-        </Badge>
+        <Avatar
+          alt="Babatunde Adebayo"
+          src="https//unsplash.com/3"
+          sx={{ color: "white" }}
+        />
       </Button>
     </>
   );

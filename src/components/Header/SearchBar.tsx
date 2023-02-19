@@ -14,7 +14,7 @@ const Search = styled("div")(({ theme }) => ({
   width: "100%",
   [theme.breakpoints.up("sm")]: {
     marginLeft: theme.spacing(1),
-    width: "auto",
+    width: "100%",
   },
 }));
 
@@ -37,9 +37,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-      width: "30ch",
+      width: "100%",
       "&:focus": {
-        width: "40ch",
+        width: "100%",
       },
     },
   },
