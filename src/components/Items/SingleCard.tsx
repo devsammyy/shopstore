@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 
-import { Button, CardContent, Grid, Typography } from "@mui/material";
+import { Button, CardContent, Typography } from "@mui/material";
 import { img2 } from "../../assets";
 
 export default function SingleCard() {
