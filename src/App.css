@@ -1,7 +1,11 @@
 main {
   font-weight: 600;
   width: 100%;
-  margin: 5rem auto;
+  margin-top: 5rem;
   overflow: hidden;
   padding: 1rem;
+}
+
+body {
+  background-color: #fdfdfd !important;
 }

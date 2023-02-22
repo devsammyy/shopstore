@@ -4,26 +4,35 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 
-import { Button, CardContent, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  ButtonBase,
+  CardContent,
+  Link,
+  Typography,
+} from "@mui/material";
 import { img2 } from "../../assets";
 
 export default function SingleCard() {
   return (
-    <Card sx={{ width: 300, height: "350px" }} elevation={1}>
-      <CardMedia component="img" height="194" image={img2} alt="Paella dish" />
-      <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
-          Shoes
-        </Typography>
-        <Typography variant="h6" color="black">
-          N200, 000
-        </Typography>
-      </CardContent>
-
-      <CardActions sx={{ display: "flex", gap: "0.8rem" }} disableSpacing>
-        <Button variant="contained">Buy now</Button>
-        <Button variant="contained">Add to Cart</Button>
-      </CardActions>
-    </Card>
+    <ButtonBase sx={{ textAlign: "unset" }}>
+      <Card sx={{ width: "200px", xs: { width: "50px" } }} elevation={1}>
+        <CardMedia component="img" image={img2} alt="Paella dish" />
+        <CardContent>
+          <Typography variant="body2" sx={{ fontWeight: 100 }}>
+            Sleek Shoe for both men and women
+          </Typography>
+          <Box sx={{ display: "flex", gap: "1rem" }}>
+            <Typography variant="body1" color="black">
+              N200, 000
+            </Typography>
+            <Typography variant="body2" color="#3d3d3d">
+              Sales 432
+            </Typography>
+          </Box>
+        </CardContent>
+      </Card>
+    </ButtonBase>
   );
 }

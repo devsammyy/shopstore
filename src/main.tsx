@@ -9,9 +9,9 @@ const THEME = createTheme({
   typography: {
     fontFamily: `"Montserrat", sans-serif`,
     fontSize: 14,
-    fontWeightLight: 300,
-    fontWeightRegular: 400,
-    fontWeightMedium: 800,
+    fontWeightLight: 700,
+    fontWeightRegular: 700,
+    fontWeightMedium: 700,
   },
 });
 

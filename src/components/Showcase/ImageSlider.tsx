@@ -6,7 +6,12 @@ import { img1, img2, img3, img4, img5, img6, img7 } from "../../assets";
 function QuiltedImageList() {
   return (
     <Container
-      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginTop: "5rem",
+      }}
     >
       <Carousel sx={{ width: "100%" }}>
         {itemData.map((item, index) => (

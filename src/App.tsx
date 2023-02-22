@@ -10,13 +10,12 @@ const App = () => {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="xl">
-        <Header />
-        <main>
-          <ImageSlider />
-          <Card />
-        </main>
-      </Container>
+
+      <Header />
+
+      <ImageSlider />
+      <Card />
+
       <Footer />
     </>
   );

@@ -98,6 +98,7 @@ export default function Header() {
             <List>
               <Collections />
             </List>
+            <Divider />
             <List>
               <Categories />
             </List>
