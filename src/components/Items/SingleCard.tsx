@@ -9,7 +9,7 @@ import { img2 } from "../../assets";
 
 export default function SingleCard() {
   return (
-    <Card sx={{ width: 245, height: "auto" }} elevation={3}>
+    <Card sx={{ width: 300, height: "350px" }} elevation={1}>
       <CardMedia component="img" height="194" image={img2} alt="Paella dish" />
       <CardContent>
         <Typography gutterBottom variant="h6" component="div">
@@ -20,7 +20,7 @@ export default function SingleCard() {
         </Typography>
       </CardContent>
 
-      <CardActions sx={{ display: "flex", justifyContent: "center" }}>
+      <CardActions sx={{ display: "flex", gap: "0.8rem" }} disableSpacing>
         <Button variant="contained">Buy now</Button>
         <Button variant="contained">Add to Cart</Button>
       </CardActions>

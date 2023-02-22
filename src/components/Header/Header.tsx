@@ -26,10 +26,14 @@ export default function Header() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ background: "black" }}>
+      <AppBar
+        component="nav"
+        sx={{ background: "#fff", color: "black" }}
+        elevation={0.5}
+      >
         <Toolbar>
           <IconButton
-            color="inherit"
+            sx={{ color: "black" }}
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -51,6 +55,7 @@ export default function Header() {
           <Box
             sx={{
               flexGrow: 1,
+              width: "100%",
               display: { sm: "flex", xs: "none", md: "flex" },
             }}
           >
@@ -80,8 +85,8 @@ export default function Header() {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              backgroundColor: "black",
-              color: "white",
+              backgroundColor: "#fff",
+              color: "#000",
             },
           }}
         >

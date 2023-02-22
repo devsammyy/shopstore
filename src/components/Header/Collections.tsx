@@ -19,7 +19,7 @@ const Collections = () => {
     <>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{ color: "white" }}>
+          <ListItemIcon sx={{ color: "#000" }}>
             <CollectionsBookmark />
           </ListItemIcon>
           <ListItemText primary={"Collections"} />
@@ -28,7 +28,7 @@ const Collections = () => {
       <Divider />
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{ color: "white" }}>
+          <ListItemIcon sx={{ color: "#000" }}>
             <Apple />
           </ListItemIcon>
           <ListItemText primary={"Supermarket"} />
@@ -36,7 +36,7 @@ const Collections = () => {
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{ color: "white" }}>
+          <ListItemIcon sx={{ color: "#000" }}>
             <Tv />
           </ListItemIcon>
           <ListItemText primary={"Electronics"} />
@@ -44,7 +44,7 @@ const Collections = () => {
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{ color: "white" }}>
+          <ListItemIcon sx={{ color: "#000" }}>
             <House />
           </ListItemIcon>
           <ListItemText primary={"Home & Office"} />

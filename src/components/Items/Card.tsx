@@ -1,25 +1,25 @@
-import { Divider, Grid, Paper, Typography } from "@mui/material";
+import { Divider, Grid, Paper, Typography, Container } from "@mui/material";
 import React from "react";
 import SingleCard from "./SingleCard";
 
 const Card = () => {
   return (
     <>
-      <Paper
-        sx={{
-          padding: "1rem",
-          marginTop: "2rem",
-        }}
-        elevation={3}
-      >
+      <Container maxWidth="lg">
         <Typography
           variant="h4"
           color="initial"
-          sx={{ fontWeight: "bold", my: 1 }}
+          sx={{ fontWeight: "bold", my: 5 }}
         >
           Super Deals
         </Typography>
-        <Grid container spacing={2} sx={{ placeContent: "start" }}>
+        <Grid container spacing={2}>
+          <Grid item>
+            <SingleCard />
+          </Grid>
+          <Grid item>
+            <SingleCard />
+          </Grid>
           <Grid item>
             <SingleCard />
           </Grid>
@@ -33,23 +33,21 @@ const Card = () => {
             <SingleCard />
           </Grid>
         </Grid>
-      </Paper>
-      <Divider />
-      <Paper
-        sx={{
-          padding: "1rem",
-          marginTop: "2rem",
-        }}
-        elevation={3}
-      >
+
         <Typography
           variant="h4"
           color="initial"
-          sx={{ fontWeight: "bold", my: 1 }}
+          sx={{ fontWeight: "bold", my: 5 }}
         >
           Official Store Deals
         </Typography>
-        <Grid container spacing={2} sx={{ placeContent: "start" }}>
+        <Grid container spacing={2}>
+          <Grid item>
+            <SingleCard />
+          </Grid>
+          <Grid item>
+            <SingleCard />
+          </Grid>
           <Grid item>
             <SingleCard />
           </Grid>
@@ -63,7 +61,7 @@ const Card = () => {
             <SingleCard />
           </Grid>
         </Grid>
-      </Paper>
+      </Container>
     </>
   );
 };
