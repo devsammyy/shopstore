@@ -8,24 +8,24 @@ const NavItems = () => {
     <>
       <Button sx={{ display: { xs: "none", sm: "block" } }}>
         <Badge badgeContent={4} color="error">
-          <Notifications sx={{ color: "#000" }} />
+          <Notifications sx={{ color: "#4e4e4e" }} />
         </Badge>
       </Button>
       <Button sx={{ display: { sm: "block", xs: "none", md: "block" } }}>
         <Badge badgeContent={4} color="error">
-          <Mail sx={{ color: "#000" }} />
+          <Mail sx={{ color: "#4e4e4e" }} />
         </Badge>
       </Button>
       <Button>
         <Badge badgeContent={0} color="error">
-          <ShoppingCart sx={{ color: "#000" }} />
+          <ShoppingCart sx={{ color: "#4e4e4e" }} />
         </Badge>
       </Button>
       <Button>
         <Avatar
           alt="Babatunde Adebayo"
           src="https//unsplash.com/3"
-          sx={{ color: "#000" }}
+          sx={{ color: "#4e4e4e" }}
         />
       </Button>
     </>

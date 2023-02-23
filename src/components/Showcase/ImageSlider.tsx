@@ -26,6 +26,6 @@ function QuiltedImageList() {
   );
 }
 
-const itemData = [img1, img2, img3, img4, img5, img6, img7];
+const itemData = [img1, img2, img3];
 
 export default QuiltedImageList;

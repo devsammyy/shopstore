@@ -20,7 +20,7 @@ const Categories = () => {
     <>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{ color: "#000" }}>
+          <ListItemIcon sx={{ color: "#666565" }}>
             <Queue />
           </ListItemIcon>
           <ListItemText primary={"Categories"} />
@@ -29,7 +29,7 @@ const Categories = () => {
       <Divider />
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{ color: "#000" }}>
+          <ListItemIcon sx={{ color: "#666565" }}>
             <CarRental />
           </ListItemIcon>
           <ListItemText primary={"Automobile"} />
@@ -37,7 +37,7 @@ const Categories = () => {
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{ color: "#000" }}>
+          <ListItemIcon sx={{ color: "#666565" }}>
             <PhoneAndroid />
           </ListItemIcon>
           <ListItemText primary={"Phones & Tablets"} />
@@ -45,7 +45,7 @@ const Categories = () => {
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{ color: "#000" }}>
+          <ListItemIcon sx={{ color: "#666565" }}>
             <Gamepad />
           </ListItemIcon>
           <ListItemText primary={"Gaming"} />
@@ -53,7 +53,7 @@ const Categories = () => {
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{ color: "#000" }}>
+          <ListItemIcon sx={{ color: "#666565" }}>
             <Laptop />
           </ListItemIcon>
           <ListItemText primary={"Computing"} />

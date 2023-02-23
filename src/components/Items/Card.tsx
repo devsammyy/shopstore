@@ -7,12 +7,11 @@ const Card = () => {
     <Container sx={{ marginY: "5rem" }}>
       <Typography
         variant="h4"
-        color="#fff"
+        color="#282828"
         sx={{
           fontFamily: "Open sans",
           fontWeight: "700",
           my: 5,
-          backgroundColor: "#163bdf",
           textAlign: "center",
         }}
       >
@@ -34,12 +33,11 @@ const Card = () => {
       </Grid>
       <Typography
         variant="h4"
-        color="#fff"
+        color="#282828"
         sx={{
           fontFamily: "Open sans",
           fontWeight: "700",
           my: 5,
-          backgroundColor: "#163bdf",
           textAlign: "center",
         }}
       >

@@ -28,7 +28,7 @@ export default function Header() {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ background: "#fff", color: "black" }}
+        sx={{ background: "#fff", color: "#666565" }}
         elevation={0.5}
       >
         <Toolbar>
@@ -46,6 +46,7 @@ export default function Header() {
             component="div"
             sx={{
               flexGrow: { xs: 1, sm: 0 },
+              fontWeight: 900,
               marginX: 2,
               display: { sm: "block" },
             }}
@@ -91,7 +92,7 @@ export default function Header() {
           }}
         >
           <Box onClick={handleDrawerToggle}>
-            <Typography variant="h6" sx={{ m: 2 }}>
+            <Typography variant="h6" sx={{ m: 2, fontWeight: 900 }}>
               Shopstore
             </Typography>
             <Divider />

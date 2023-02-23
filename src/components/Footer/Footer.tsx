@@ -20,7 +20,7 @@ export const Footer: FC = (): ReactElement => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="subtitle1">
-              {`${new Date().getFullYear()} | &copy; | All right reserved`}
+              &copy; All right reserved {`${new Date().getFullYear()} `}
             </Typography>
           </Grid>
         </Grid>
