@@ -23,7 +23,7 @@ export default function SingleCard() {
       sx={{ textAlign: "unset" }}
       onClick={() => dispatch(increment())}
     >
-      <Card sx={{ width: "200px", xs: { width: "50px" } }} elevation={1}>
+      <Card sx={{ width: { sm: "200px" } }} elevation={1}>
         <CardMedia component="img" image={img2} alt="Paella dish" />
         <CardContent>
           <Typography
@@ -33,7 +33,7 @@ export default function SingleCard() {
           >
             Sleek Shoe for both men and women
           </Typography>
-          <Box sx={{ display: "flex", gap: "1rem" }}>
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography variant="body1" color="#666565">
               &#8358;200, 000
             </Typography>
