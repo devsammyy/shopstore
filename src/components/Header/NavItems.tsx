@@ -1,11 +1,19 @@
 import React from "react";
 import { Mail, Notifications, ShoppingCart } from "@mui/icons-material";
-import { Avatar, Badge, Box } from "@mui/material";
+import { Avatar, Badge, Box, Menu, MenuItem } from "@mui/material";
 import Button from "@mui/material/Button";
 import { useSelector } from "react-redux";
 
 const NavItems = () => {
   const counter = useSelector((state: any) => state.counter.value);
+  const [anchorEl, setAnchorEl] = React.useState<any | boolean>(false);
+
+  const handleClick = (event: React.MouseEvent<any | boolean>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(false);
+  };
 
   return (
     <>
@@ -24,7 +32,12 @@ const NavItems = () => {
           <ShoppingCart sx={{ color: "#4e4e4e" }} />
         </Badge>
       </Button>
-      <Button>
+      <Button onClick={handleClick}>
+        <Menu anchorEl={anchorEl} open={anchorEl} onClose={handleClose}>
+          <MenuItem onClick={handleClose}>Profile</MenuItem>
+          <MenuItem onClick={handleClose}>My account</MenuItem>
+          <MenuItem onClick={handleClose}>Logout</MenuItem>
+        </Menu>
         <Avatar
           alt="Babatunde Adebayo"
           src="https//unsplash.com/3"

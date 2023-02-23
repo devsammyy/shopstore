@@ -14,8 +14,8 @@ import SearchBar from "./SearchBar";
 import Collections from "./Collections";
 import Categories from "./Categories";
 
-const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact", "Login/Register"];
+const drawerWidth = 350;
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
 

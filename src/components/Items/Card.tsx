@@ -38,10 +38,11 @@ const Card = () => {
           fontFamily: "Open sans",
           fontWeight: "700",
           my: 5,
+          fontSize: { md: "20px" },
           textAlign: "center",
         }}
       >
-        Super Deals
+        Store Super Deals
       </Typography>
       <Grid container spacing={2} sx={{ placeContent: "center" }}>
         <Grid item>
