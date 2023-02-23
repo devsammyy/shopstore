@@ -13,10 +13,16 @@ import {
   Typography,
 } from "@mui/material";
 import { img2 } from "../../assets";
+import { useDispatch } from "react-redux";
+import { increment } from "../../slices/counterSlice";
 
 export default function SingleCard() {
+  const dispatch = useDispatch();
   return (
-    <ButtonBase sx={{ textAlign: "unset" }}>
+    <ButtonBase
+      sx={{ textAlign: "unset" }}
+      onClick={() => dispatch(increment())}
+    >
       <Card sx={{ width: "200px", xs: { width: "50px" } }} elevation={1}>
         <CardMedia component="img" image={img2} alt="Paella dish" />
         <CardContent>
