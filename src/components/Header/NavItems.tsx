@@ -1,18 +1,19 @@
 import React from "react";
 import { Mail, Notifications, ShoppingCart } from "@mui/icons-material";
-import { Avatar, Badge, Box, Menu, MenuItem } from "@mui/material";
+import { Avatar, Badge, Menu, MenuItem } from "@mui/material";
 import Button from "@mui/material/Button";
 import { useSelector } from "react-redux";
 
 const NavItems = () => {
   const counter = useSelector((state: any) => state.counter.value);
-  const [anchorEl, setAnchorEl] = React.useState<any | boolean>(false);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
 
-  const handleClick = (event: React.MouseEvent<any | boolean>) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
-    setAnchorEl(false);
+    setAnchorEl(null);
   };
 
   return (
@@ -33,17 +34,17 @@ const NavItems = () => {
         </Badge>
       </Button>
       <Button onClick={handleClick}>
-        <Menu anchorEl={anchorEl} open={anchorEl} onClose={handleClose}>
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
-        </Menu>
         <Avatar
           alt="Babatunde Adebayo"
           src="https//unsplash.com/3"
           sx={{ color: "#4e4e4e" }}
         />
       </Button>
+      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
     </>
   );
 };
