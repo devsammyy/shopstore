@@ -9,7 +9,6 @@ import store from "./store";
 const THEME = createTheme({
   typography: {
     fontFamily: `"Montserrat", sans-serif`,
-    fontSize: 14,
     fontWeightLight: 700,
     fontWeightRegular: 700,
     fontWeightMedium: 700,

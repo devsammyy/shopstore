@@ -4,7 +4,11 @@ import SingleCard from "./SingleCard";
 
 const Card = () => {
   return (
-    <Container sx={{ marginY: "5rem" }}>
+    <Container
+      sx={{
+        marginY: "2rem",
+      }}
+    >
       <Typography
         variant="h4"
         color="#282828"
@@ -17,17 +21,17 @@ const Card = () => {
       >
         Super Deals
       </Typography>
-      <Grid container spacing={1} sx={{ placeContent: "center" }}>
-        <Grid item>
+      <Grid container spacing={2} sx={{ placeContent: "center" }}>
+        <Grid item md={3}>
           <SingleCard />
         </Grid>
-        <Grid item>
+        <Grid item md={3}>
           <SingleCard />
         </Grid>
-        <Grid item>
+        <Grid item md={3}>
           <SingleCard />
         </Grid>
-        <Grid item>
+        <Grid item md={3}>
           <SingleCard />
         </Grid>
       </Grid>
@@ -38,7 +42,6 @@ const Card = () => {
           fontFamily: "Open sans",
           fontWeight: "700",
           my: 5,
-          fontSize: { md: "20px" },
           textAlign: "center",
         }}
       >

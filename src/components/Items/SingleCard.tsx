@@ -23,7 +23,14 @@ export default function SingleCard() {
       sx={{ textAlign: "unset" }}
       onClick={() => dispatch(increment())}
     >
-      <Card sx={{ width: { sm: "200px" } }} elevation={1}>
+      <Card
+        sx={{
+          width: { sm: "200px" },
+          backdropFilter: "blur(5px)",
+          background: "rgba(255, 242, 242, 0.8)",
+        }}
+        elevation={2}
+      >
         <CardMedia component="img" image={img2} alt="Paella dish" />
         <CardContent>
           <Typography

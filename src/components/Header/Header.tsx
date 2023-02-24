@@ -28,8 +28,12 @@ export default function Header() {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ background: "#fff", color: "#666565" }}
-        elevation={0.5}
+        sx={{
+          background: "rgba(255, 255, 255, 0.5)",
+          color: "#666565",
+          backdropFilter: "blur(12px)",
+        }}
+        elevation={2}
       >
         <Toolbar>
           <IconButton

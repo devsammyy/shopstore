@@ -10,12 +10,9 @@ const App = () => {
   return (
     <>
       <CssBaseline />
-
       <Header />
-
       <ImageSlider />
       <Card />
-
       <Footer />
     </>
   );
