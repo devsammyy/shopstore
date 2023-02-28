@@ -31,48 +31,51 @@ export default function SingleCard() {
         display: "flex",
         flexWrap: "wrap",
         gap: "1rem",
+        width: "100%",
       }}
     >
-      {cartItems.map((cartItem: CartData) => (
-        <Card elevation={3} sx={{ width: "200px", height: "100%" }}>
-          <CardMedia
-            component="img"
-            image={cartItem.cartImg}
-            alt="Paella dish"
-            sx={{
-              height: 100,
-              width: "100%",
-            }}
-          />
-          <CardContent>
-            <Typography
-              color="#666565"
-              variant="h6"
+      {cartItems.map((cartItem: CartData) => {
+        return (
+          <Card elevation={3} sx={{ width: { sm: "200px" }, height: "100%" }}>
+            <CardMedia
+              component="img"
+              image={cartItem.cartImg}
+              alt="Paella dish"
               sx={{
-                fontWeight: 600,
-                marginBottom: "1rem",
-                textAlign: "center",
+                height: "100%",
+                width: "100%",
               }}
-            >
-              {cartItem.description}
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                fontWeight: 400,
-              }}
-            >
-              <Typography variant="body2" color="#666565">
-                &#8358;{cartItem.price}
+            />
+            <CardContent>
+              <Typography
+                color="#666565"
+                variant="h6"
+                sx={{
+                  fontWeight: 600,
+                  marginBottom: "1rem",
+                  textAlign: "center",
+                }}
+              >
+                {cartItem.description}
               </Typography>
-              <Typography variant="body2" color="#666565">
-                Sales {cartItem.details}
-              </Typography>
-            </Box>
-          </CardContent>
-        </Card>
-      ))}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  fontWeight: 400,
+                }}
+              >
+                <Typography variant="body2" color="#666565">
+                  &#8358;{cartItem.price}
+                </Typography>
+                <Typography variant="body2" color="#666565">
+                  Sales {cartItem.details}
+                </Typography>
+              </Box>
+            </CardContent>
+          </Card>
+        );
+      })}
     </Box>
   );
 }
