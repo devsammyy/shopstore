@@ -1,11 +1,8 @@
 main {
-  font-weight: 600;
   width: 100%;
-  margin-top: 5rem;
   overflow: hidden;
-  padding: 1rem;
 }
 
 body {
-  background-color: #f7f7f7 !important;
+  background-color: #e0e0e0 !important;
 }

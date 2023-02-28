@@ -1,55 +1,78 @@
 import * as React from "react";
-
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import CardActions from "@mui/material/CardActions";
-
 import {
   Box,
   Button,
   ButtonBase,
   CardContent,
-  Link,
+  Grid,
   Typography,
 } from "@mui/material";
-import { img2 } from "../../assets";
-import { useDispatch } from "react-redux";
-import { increment } from "../../slices/counterSlice";
+import Carousel from "react-material-ui-carousel";
+import { useDispatch, useSelector } from "react-redux";
+
+interface CartData {
+  id: number;
+  category: string;
+  cartImg: string;
+  description: string;
+  price: string;
+  details: string;
+}
 
 export default function SingleCard() {
-  const dispatch = useDispatch();
+  const cartItems = useSelector((state: any) => state.cart.data);
+
   return (
-    <ButtonBase
-      sx={{ textAlign: "unset" }}
-      onClick={() => dispatch(increment())}
+    <Box
+      sx={{
+        marginBottom: "2rem",
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "1rem",
+      }}
     >
-      <Card
-        sx={{
-          width: { sm: "200px" },
-          backdropFilter: "blur(5px)",
-          background: "rgba(255, 242, 242, 0.8)",
-        }}
-        elevation={2}
-      >
-        <CardMedia component="img" image={img2} alt="Paella dish" />
-        <CardContent>
-          <Typography
-            color="#666565"
-            variant="body2"
-            sx={{ fontWeight: 600, marginBottom: "1rem" }}
-          >
-            Sleek Shoe for both men and women
-          </Typography>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="body1" color="#666565">
-              &#8358;200, 000
+      {cartItems.map((cartItem: CartData) => (
+        <Card elevation={3} sx={{ width: "200px", height: "100%" }}>
+          <CardMedia
+            component="img"
+            image={cartItem.cartImg}
+            alt="Paella dish"
+            sx={{
+              height: 100,
+              width: "100%",
+            }}
+          />
+          <CardContent>
+            <Typography
+              color="#666565"
+              variant="h6"
+              sx={{
+                fontWeight: 600,
+                marginBottom: "1rem",
+                textAlign: "center",
+              }}
+            >
+              {cartItem.description}
             </Typography>
-            <Typography variant="body2" color="#666565">
-              Sales 432
-            </Typography>
-          </Box>
-        </CardContent>
-      </Card>
-    </ButtonBase>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                fontWeight: 400,
+              }}
+            >
+              <Typography variant="body2" color="#666565">
+                &#8358;{cartItem.price}
+              </Typography>
+              <Typography variant="body2" color="#666565">
+                Sales {cartItem.details}
+              </Typography>
+            </Box>
+          </CardContent>
+        </Card>
+      ))}
+    </Box>
   );
 }

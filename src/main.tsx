@@ -6,18 +6,18 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import { Provider } from "react-redux";
 import store from "./store";
 
-const THEME = createTheme({
+const theme = createTheme({
   typography: {
-    fontFamily: `"Montserrat", sans-serif`,
+    fontFamily: `'Poppins', sans-serif`,
     fontWeightLight: 700,
-    fontWeightRegular: 700,
+    fontWeightRegular: 500,
     fontWeightMedium: 700,
   },
 });
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <Provider store={store}>
-    <ThemeProvider theme={THEME}>
+    <ThemeProvider theme={theme}>
       <React.StrictMode>
         <App />
       </React.StrictMode>

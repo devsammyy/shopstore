@@ -1,68 +1,30 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import React from "react";
 import SingleCard from "./SingleCard";
 
-const Card = () => {
+const CardContainer = () => {
   return (
-    <Container
-      sx={{
-        marginY: "2rem",
-      }}
-    >
+    <>
       <Typography
         variant="h4"
         color="#282828"
         sx={{
           fontFamily: "Open sans",
           fontWeight: "700",
-          my: 5,
-          textAlign: "center",
+          my: 4,
         }}
       >
-        Super Deals
+        Shop our most trusted products
       </Typography>
-      <Grid container spacing={2} sx={{ placeContent: "center" }}>
-        <Grid item md={3}>
-          <SingleCard />
-        </Grid>
-        <Grid item md={3}>
-          <SingleCard />
-        </Grid>
-        <Grid item md={3}>
-          <SingleCard />
-        </Grid>
-        <Grid item md={3}>
-          <SingleCard />
-        </Grid>
-      </Grid>
-      <Typography
-        variant="h4"
-        color="#282828"
+      <Box
         sx={{
-          fontFamily: "Open sans",
-          fontWeight: "700",
-          my: 5,
-          textAlign: "center",
+          width: "100%",
         }}
       >
-        Store Super Deals
-      </Typography>
-      <Grid container spacing={2} sx={{ placeContent: "center" }}>
-        <Grid item>
-          <SingleCard />
-        </Grid>
-        <Grid item>
-          <SingleCard />
-        </Grid>
-        <Grid item>
-          <SingleCard />
-        </Grid>
-        <Grid item>
-          <SingleCard />
-        </Grid>
-      </Grid>
-    </Container>
+        <SingleCard />
+      </Box>
+    </>
   );
 };
 
-export default Card;
+export default CardContainer;
