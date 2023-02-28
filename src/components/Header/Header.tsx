@@ -29,8 +29,8 @@ export default function Header() {
       <AppBar
         component="nav"
         sx={{
-          background: "rgba(255, 255, 255, 0.5)",
-          color: "#666565",
+          background: "rgba(255, 255, 255, 1)",
+          color: "#1d1d1d",
           backdropFilter: "blur(12px)",
         }}
         elevation={2}
